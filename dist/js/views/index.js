@@ -17,5 +17,14 @@ $(function() {
         }
     })
 
+    var orgDetail = new OrgPop({
+        $el: '#tpl-pop-sign-wrap',
+        events: {
+            toggleCheck: function($this) {
+                $this.toggleClass('active');
+                $this.parent().siblings().find('[bindClick="toggleCheck"]').toggleClass('active');
+            }
+        }
+    })
 
 })
