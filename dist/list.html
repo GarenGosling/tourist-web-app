@@ -128,7 +128,7 @@
                         <td>{{:sex}}</td>
                         <td>{{:phone}}</td>
                         <td>{{:itemName}}</td>
-                        <td>{{:createTime}}</td>
+                        <td>{{dateFormat:createTime}}</td>
                     </tr>
 
 
@@ -153,19 +153,17 @@
 <script src="js/jsrender.js"></script>
 <script>
     $(function () {
+        //获取模板
+        var jsRenderTpl = $.templates('#applys');
+        $.views.converters({
+            dateFormat: function(val) {
+                return $.dateFormat(val,"yyyy-MM-dd HH:mm:ss")
+            }
+        });
         $.get("http://localhost:8092/applys", function (result) {
             if (result.code == 200) {
-//                var html="";
-//                $.each(result.data,function (index,value) {
-//                    html+="<tr><td>"+value.name+"</td><td>"+value.sex+"</td><td>"+value.phone+"</td><td>"+value.itemName+"</td><td>"+$.dateFormat(value.createTime,"yyyy年MM月dd日HH时mm分")+"</td></tr>";
-//                })
-//                $("tbody").html(html);
-
-                //获取模板
-                var jsRenderTpl = $.templates('#applys');
                 //末班与数据结合
                 var html = jsRenderTpl(result.data);
-
                 $("tbody").html(html);
             }
         })
