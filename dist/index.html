@@ -111,19 +111,20 @@
 		<div class="pop_main_form">
 			<div class="pb28 clearfix">
 				<label class="fl clearfix w67"><span class="fl">姓</span><span class="fr">名</span></label>
-				<input class="fl" type="text" value="请填写您的姓名">
+				<input class="fl" type="text" id="name" autocomplete="off" placeholder="请填写您的姓名">
 			</div>
 			<div class="pb28 clearfix">
 				<label class="fl clearfix w67"><span class="fl">性</span><span class="fr">别</span></label>
-				<p class="check_wrap fl clearfix"><span class="check active fl" bindClick="toggleCheck"></span><em class="fl">男</em></p>
-				<p class="check_wrap fl clearfix"><span class="check fl" bindClick="toggleCheck"></span><em class="fl">女</em></p>
+				<p class="check_wrap fl clearfix"><span class="check active fl sex" value="1" bindClick="toggleCheck"></span><em class="fl">男</em></p>
+				<p class="check_wrap fl clearfix"><span class="check fl sex" bindClick="toggleCheck"></span><em class="fl">女</em></p>
 			</div>
 			<div class="pb28 clearfix">
 				<label class="fl clearfix w67">手机号码</label>
-				<input class="fl" type="text" value="请输入您的手机号码">
+				<input class="fl" type="text" id="phone" autocomplete="off" placeholder="请输入您的手机号码">
 			</div>
 			<div class="btm_btn">
-				<a class="g_btn_gree" href="#">立即报名</a>
+				<a class="g_btn_gree apply" href="javascript:;">立即报名</a>
+				<a class="g_btn_gree show" href="javascript:;">查看全部</a>
 			</div>
 		</div>
 	</div>
@@ -134,5 +135,53 @@
 <script type="text/javascript" src="js/bundle.main.js"></script>
 <script type="text/javascript" src="js/plugins/org.js"></script>
 <script type="text/javascript" src="js/views/index.js"></script>
+<script>
+	$(function () {
+	    //
+		$(".show").click(function () {
+            var password=prompt("请输入密码","");
+            if(password){
+				if(password=="garen666"){
+				    window.location.href="list.html";
+				}else
+				    alert("密码错误");
+			}
+        })
+	    //报名提交
+		$(".apply").click(function () {
+			var apply={}
+			apply.name=$("#name").val().trim();
+			apply.sex=$(".sex.active").siblings("em").text();
+			apply.phone=$("#phone").val().trim();
+			apply.itemName="旅行家";
+			if(apply.name==""){
+			    alert("请输入姓名");
+			    return;
+			}
+            if(apply.sex==null){
+                alert("请选择性别");
+                return;
+            }
+            if(apply.phone==""){
+                alert("请输入手机号")
+				return;
+			}
+            $.ajax({
+                url:'http://localhost:8092/applys',
+                type: 'POST',
+                data: JSON.stringify(apply),
+                contentType: 'application/json',
+                success: function (result) {
+                    if(result.code==200){
+                        alert("报名成功");
+                        location.reload();
+                    }else {
+                        alert(result.message);
+					}
+                }
+            })
+        })
+    })
+</script>
 </body>
 </html>
