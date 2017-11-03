@@ -85,6 +85,7 @@
 <script type="text/javascript" src="js/bundle.main.js"></script>
 <script type="text/javascript" src="js/plugins/org.js"></script>
 <script type="text/javascript" src="js/views/index.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
 <script src="js/jsrender.js"></script>
 <script>
     $(function () {
@@ -95,7 +96,7 @@
                 return $.dateFormat(val,"yyyy-MM-dd HH:mm:ss")
             }
         });
-        $.get("http://localhost:8092/applys", function (result) {
+        $.get(url.tourist.applys, function (result) {
             if (result.code == 200) {
                 //末班与数据结合
                 var html = jsRenderTpl(result.data);

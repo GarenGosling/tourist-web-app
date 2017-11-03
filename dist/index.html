@@ -140,6 +140,8 @@
 <script type="text/javascript" src="js/bundle.main.js"></script>
 <script type="text/javascript" src="js/plugins/org.js"></script>
 <script type="text/javascript" src="js/views/index.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
 <script>
 	$(function () {
 	    $(".sign").click(function () {
@@ -178,8 +180,13 @@
                 alert("请输入手机号")
 				return;
 			}
+			var phone_reg = /^\d{11}$/;
+            if(!phone_reg.test(apply.phone)){
+                alert("请输入真实手机号");
+                return;
+            }
             $.ajax({
-                url:'http://localhost:8092/applys',
+                url:url.tourist.applys,
                 type: 'POST',
                 data: JSON.stringify(apply),
                 contentType: 'application/json',
