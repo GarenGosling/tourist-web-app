@@ -7,106 +7,41 @@
     <link href="style/main.css" rel="stylesheet">
 </head>
 
-<body id="index">
-<div bindClick="hideSelect">
-    <!--<div class="header">-->
-        <!--<div class="top">-->
-            <!--<div class="w1200 clearfix">-->
-                <!--<div class="fl">-->
-                    <!--<span class="slogan">中产阶级社会生活向导</span>-->
-                    <!--<a class="opacity" href="#">登陆</a> /-->
-                    <!--<a class="opacity" href="#">注册</a>-->
-                <!--</div>-->
-                <!--<ul class="link fr clearfix">-->
-                    <!--<li class="fl">-->
-                        <!--<a class="opacity fl" href="#">乾坤集团</a>-->
-                    <!--</li>-->
-                    <!--<li class="z_in5 pos_r fl" bindClick="toggleLink">-->
-                        <!--<a class="opacity fl" href="#">合作链接</a>-->
-                        <!--<span class="triangle fl"></span>-->
-                        <!--<ol class="hide">-->
-                            <!--<li><a href="http://www.baidu.com" target="blank">百度</a></li>-->
-                            <!--<li><a class="last" href="http://www.sina.com" target="blank">新浪</a></li>-->
-                        <!--</ol>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="nav">-->
-            <!--<div class="w1200">-->
-                <!--<div class="logo">-->
-                    <!--<a href="index.html"><img src="images/1-2.png"></a>-->
-                <!--</div>-->
-                <!--<ul class="clearfix">-->
-                    <!--<li class="fl">-->
-                        <!--<a href="#">全球视野</a>-->
-                    <!--</li>-->
-                    <!--<li class="fl">-->
-                        <!--<a href="#">他山之石</a>-->
-                    <!--</li>-->
-                    <!--<li class="fl">-->
-                        <!--<a href="#">华人世界</a>-->
-                    <!--</li>-->
-                    <!--<li class="fr">-->
-                        <!--<a href="#">中产投资</a>-->
-                    <!--</li>-->
-                    <!--<li class="fr">-->
-                        <!--<a href="#">主题文章</a>-->
-                    <!--</li>-->
-                    <!--<li class="fr">-->
-                        <!--<a href="#">中产生活</a>-->
-                    <!--</li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <div class="main clearfix">
-        <div class="main_tourist_wrap">
-            <div class="img"><img src="images/1-3.png"></div>
-            <div class="btns t628">
-                <a class="ml44 fl" href="#">露营</a>
-                <a class="ml44 fl" href="#">汽车公园</a>
-                <a class="ml44 fl" href="#">绿色文化</a>
-            </div>
-        </div>
-        <div class="main_tourist_wrap">
-            <div class="img"><img src="images/1-4.png"></div>
-            <div class="btns t590">
-                <a class="mr44 fr" href="#">自驾环行</a>
-                <a class="mr44 fr" href="#">极限越野</a>
-                <a class="mr44 fr" href="#">房车出游</a>
-            </div>
-        </div>
-        <div class="main_tourist_wrap">
-            <div class="img"><img src="images/1-5.png"></div>
-            <div class="btns t600">
-                <a class="ml44 fl" href="#">空中树阁</a>
-                <a class="ml44 fl" href="#">乡村别野</a>
-                <a class="ml44 fl" href="#">山中行宫</a>
-            </div>
-        </div>
-    </div>
+<body>
 
-    <div class="footer">
-        <div class="footer_nav">
-            <a class="opacity" href="#">关于我们</a>
-            <a class="opacity" href="#">加入中产者</a>
-            <a class="opacity" href="#">用户协议</a>
-            <a class="opacity" href="#">企业服务</a>
-            <a class="opacity" href="#">帮助中心</a>
-            <a class="opacity" href="#">联系我们</a>
-        </div>
-        <div class="copyright">
-            京ICP备11017824号-4&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;工信部备案：京ICP备13038979号-3&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;北京市公安局朝阳分局备案编号:11010502000501
-        </div>
-        <div>
-            Creative Commons © 2017  中产者网
-        </div>
+<div class="sign_list_wrap">
+    <h3>报名列表</h3>
+    <div class="tb_wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>手机号码</th>
+                    <th>项目名</th>
+                    <th>报名时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <script type="text/x-jsrender" id="applys">
+                <tr>
+                    <td>{{:name}}</td>
+                    <td>{{:sex}}</td>
+                    <td>{{:phone}}</td>
+                    <td>{{:itemName}}</td>
+                    <td>{{dateFormat:createTime}}</td>
+                </tr>
+                </script>
+            </tbody>    
+        </table>
+    </div>
+    <div class="txc">
+        <a href="index.html" class="g_btn_gree">回首页</a>
     </div>
 </div>
 
 <!-- 报名弹窗 -->
-<div id="tpl-pop-sign-wrap">
+<!-- <div id="tpl-pop-sign-wrap">
     <div class="pop_wrap pt10">
         <h1 class="pop_tit"><img src="images/1-7.png"></h1>
         <div class="pop_main">
@@ -143,7 +78,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 <script type="text/javascript" src="js/jquery.min.js"></script>

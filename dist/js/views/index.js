@@ -61,6 +61,9 @@ $(function() {
             },
             hideSelect: function() {
                 $('[bindClick="toggleLink"]').find('ol').slideUp(150);
+            },
+            showPop: function() {
+                orgDetail.show();
             }
         }
     })

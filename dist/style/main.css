@@ -236,3 +236,92 @@ body {
   padding: 67px 0 0 0;
   text-align: center;
   }
+
+  .side_slide {
+    position: fixed;
+    bottom: 80px;
+    right: 5%;
+    z-index: 8;
+    width: 221px;
+    height: 361px;
+    background: url('../images/1-10.png') no-repeat 0 0;
+  }
+
+  .side_slide .sign{
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  .side_slide .list{
+    position: absolute;
+    top: 170px;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 60px;
+  }
+
+  .side_slide .gotop{
+    position: absolute;
+    bottom: 0;
+    left: 70px;
+    right: 70px;
+    display: block;
+    height: 80px;
+  }
+
+  .sign_list_wrap {
+    padding-bottom: 108px;
+  }
+  .sign_list_wrap h3 {
+    height: 90px;
+    line-height: 90px;
+    color: #599cb1;
+    font-size: 20px;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  .sign_list_wrap .tb_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 200px;
+  }
+
+  .sign_list_wrap .tb_wrap table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  .sign_list_wrap thead tr {
+    height: 50px;
+    line-height: 50px;
+    color: #333;
+    font-size: 16px;
+    background: #dcdcdc;
+  }
+
+  .sign_list_wrap thead tr th {
+    font-weight: normal;
+    border: none;
+  }
+
+  .sign_list_wrap tbody tr {
+    height: 46px;
+    line-height: 46px;
+    color: #333;
+    font-size: 16px;
+    background: #fff;
+    border-right: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+  }
+
+  .sign_list_wrap tbody tr td{
+    border-bottom: 1px solid #dcdcdc;
+  }

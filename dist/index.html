@@ -6,7 +6,7 @@
 <link href="style/main.css" rel="stylesheet"></head>
 
 <body id="index">
-<div bindClick="hideSelect">
+<div id="top" bindClick="hideSelect">
 	<!--<div class="header">-->
 		<!--<div class="top">-->
 			<!--<div class="w1200 clearfix">-->
@@ -62,25 +62,25 @@
 		<div class="main_tourist_wrap">
 			<div class="img"><img src="images/1-3.png"></div>
 			<div class="btns t628">
-				<a class="ml44 fl" href="#">露营</a>
-				<a class="ml44 fl" href="#">汽车公园</a>
-				<a class="ml44 fl" href="#">绿色文化</a>
+				<a class="ml44 fl">露营</a>
+				<a class="ml44 fl">汽车公园</a>
+				<a class="ml44 fl">绿色文化</a>
 			</div>
 		</div>
 		<div class="main_tourist_wrap">
 			<div class="img"><img src="images/1-4.png"></div>
 			<div class="btns t590">
-				<a class="mr44 fr" href="#">自驾环行</a>
-				<a class="mr44 fr" href="#">极限越野</a>
-				<a class="mr44 fr" href="#">房车出游</a>
+				<a class="mr44 fr">自驾环行</a>
+				<a class="mr44 fr">极限越野</a>
+				<a class="mr44 fr">房车出游</a>
 			</div>
 		</div>
 		<div class="main_tourist_wrap">
 			<div class="img"><img src="images/1-5.png"></div>
 			<div class="btns t600">
-				<a class="ml44 fl" href="#">空中树阁</a>
-				<a class="ml44 fl" href="#">乡村别野</a>
-				<a class="ml44 fl" href="#">山中行宫</a>
+				<a class="ml44 fl">空中树阁</a>
+				<a class="ml44 fl">乡村别野</a>
+				<a class="ml44 fl">山中行宫</a>
 			</div>
 		</div>
 	</div>
@@ -101,10 +101,16 @@
 			Creative Commons © 2017  中产者网
 		</div>
 	</div>
+
+	<div class="side_slide">
+		<a class="sign" bindClick="showPop"></a>
+		<a class="list" href="list.html"></a>
+		<a class="gotop" href="#top"></a>
+	</div>
 </div>
 
 <!-- 报名弹窗 -->
-<div id="tpl-pop-sign-wrap">
+<div id="tpl-pop-sign-wrap" class="hide">
   <div class="pop_wrap pt10">
 	<h1 class="pop_tit"><img src="images/1-7.png"></h1>
 	<div class="pop_main">
@@ -124,7 +130,6 @@
 			</div>
 			<div class="btm_btn">
 				<a class="g_btn_gree apply" href="javascript:;">立即报名</a>
-				<a class="g_btn_gree show" href="javascript:;">查看全部</a>
 			</div>
 		</div>
 	</div>
