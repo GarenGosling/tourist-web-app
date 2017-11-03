@@ -104,7 +104,7 @@
 
 	<div class="side_slide">
 		<a class="sign" bindClick="showPop"></a>
-		<a class="list" href="list.html"></a>
+		<a class="list" href="javascript:;"></a>
 		<a class="gotop" href="#top"></a>
 	</div>
 </div>
@@ -142,8 +142,10 @@
 <script type="text/javascript" src="js/views/index.js"></script>
 <script>
 	$(function () {
-	    //
-		$(".show").click(function () {
+	    $(".sign").click(function () {
+			$("#tpl-pop-sign-wrap").toggle();
+        })
+		$(".list").click(function () {
             var password=prompt("请输入密码","");
             if(password){
 				if(password=="garen666"){
@@ -163,6 +165,11 @@
 			    alert("请输入姓名");
 			    return;
 			}
+            var reg = /^[\u4E00-\u9FA5]{2,5}$/;
+            if(!reg.test(apply.name)){
+                alert("请输入真实中文名");
+                return;
+            }
             if(apply.sex==null){
                 alert("请选择性别");
                 return;
