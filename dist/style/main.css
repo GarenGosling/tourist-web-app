@@ -325,3 +325,28 @@ body {
   .sign_list_wrap tbody tr td{
     border-bottom: 1px solid #dcdcdc;
   }
+
+.detail_wrap {
+  position: relative;
+  width: 100%;
+  height: 1038px;
+  overflow: hidden;
+}
+.detail_wrap_img {
+  position: absolute;
+  top:0;
+  left: 50%;
+  width: 1920px;
+  height: 1038px;
+  margin-left: -960px;
+}
+.detail_wrap_item {
+  display: none;
+}
+.detail_wrap_btn {
+  position: absolute;
+  top: 700px;
+  left: 50%;
+  width: 145px;
+  margin-left: -72px;
+}
